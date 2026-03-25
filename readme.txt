@@ -17,7 +17,9 @@ This plugin draws a subtle outline around block editor blocks (first four layers
 
 *Be aware:* Once you worked with this plugin, you don't want to use the block editor without it anymore :)
 
-Contributions are welcome via [Github](https://github.com/meine-infoseite-de/meine-infoseite-block-highlighter).
+**Contribute**: [https://github.com/meine-infoseite-de/meine-infoseite-block-highlighter](https://github.com/meine-infoseite-de/meine-infoseite-block-highlighter)
+
+**Sponsored by**: [sachsen.tours](https://sachsen.tours)
 
 == Upgrade Notice ==
 
