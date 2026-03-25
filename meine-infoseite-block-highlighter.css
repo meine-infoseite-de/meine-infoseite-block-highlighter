@@ -1,0 +1,115 @@
+:root {
+    --mi-block-block-shortcode-min-height: 1px;
+    --mi-block-highlighter-color-level-1-hover: #0000FF;
+    --mi-block-highlighter-color-level-1: #0000FF33;
+    --mi-block-highlighter-color-level-2-hover: #FF0000;
+    --mi-block-highlighter-color-level-2: #FF000033;
+    --mi-block-highlighter-color-level-3-hover: #008000;
+    --mi-block-highlighter-color-level-3: #00800033;
+    --mi-block-highlighter-color-level-4-hover: #FFFF00;
+    --mi-block-highlighter-color-level-4: #FFFF0033;
+    --mi-block-highlighter-hidden-block-opacity: 0.7;
+    --mi-block-highlighter-title-background-color: #e0e0e0;
+    --mi-block-highlighter-title-color: #797979;
+}
+
+#editor, #site-editor, .block-editor-block-list__layout {
+    /*
+       Make hidden elements visible
+       It's only partially working for now.
+     */
+
+    .block-editor-block-list__block.is-block-hidden {
+        visibility: visible;
+        height: auto;
+        opacity: var(--mi-block-highlighter-hidden-block-opacity);
+
+        &:not(.is-selected, :has(.is-selected)) {
+            opacity: var(--mi-block-highlighter-hidden-block-opacity);
+            filter: grayscale(1);
+        }
+    }
+
+    /* Make the spacer visible */
+
+    .block-library-spacer__resize-container {
+        background: repeating-linear-gradient(
+                45deg,
+                var(--mi-block-highlighter-color-level-1),
+                var(--mi-block-highlighter-color-level-1) 10px,
+                var(--mi-block-highlighter-color-level-4) 10px,
+                var(--mi-block-highlighter-color-level-4) 20px
+        );
+
+        &.has-show-handle {
+            background: repeating-linear-gradient(
+                    45deg,
+                    var(--mi-block-highlighter-color-level-3),
+                    var(--mi-block-highlighter-color-level-3) 10px,
+                    var(--mi-block-highlighter-color-level-4) 10px,
+                    var(--mi-block-highlighter-color-level-4) 20px
+            );
+        }
+    }
+
+    /* Make the shortcode block visible */
+
+    .components-placeholder.components-placeholder {
+        min-height: var(--mi-block-block-shortcode-min-height);
+    }
+
+    /* Add subtle outline for 4 layers */
+
+    .block-editor-block-list__block:not(.editor-post-title) {
+        outline: 1px dotted var(--mi-block-highlighter-color-level-1);
+
+        &:after {
+            outline: 1px solid var(--mi-block-highlighter-color-level-1-hover);
+        }
+
+        .block-editor-block-list__block {
+            outline: 1px dotted var(--mi-block-highlighter-color-level-2);
+
+            &:after {
+                outline: 1px solid var(--mi-block-highlighter-color-level-2-hover);
+            }
+
+            .block-editor-block-list__block {
+                outline: 1px dotted var(--mi-block-highlighter-color-level-3);
+
+                &:after {
+                    outline: 1px solid var(--mi-block-highlighter-color-level-3-hover);
+                }
+
+                .block-editor-block-list__block {
+                    outline: 1px dotted var(--mi-block-highlighter-color-level-4);
+
+                    &:after {
+                        outline: 1px solid var(--mi-block-highlighter-color-level-4-hover);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** Separate post title from content */
+
+.editor-styles-wrapper {
+    .is-root-container {
+        padding-block: var(--wp--style--block-gap, 1.5rem);
+    }
+
+    .edit-post-visual-editor__post-title-wrapper {
+        max-width: 100% !important;
+        margin-top: 0 !important;
+        background: var(--mi-block-highlighter-title-background-color);
+        border-bottom: 1px solid var(--mi-block-highlighter-title-color) !important;
+
+        .editor-post-title, .wp-block-post-title {
+            color: var(--mi-block-highlighter-title-color) !important;
+            padding-top: 0.67rem;
+            margin-top: 0 !important;
+        }
+    }
+}
