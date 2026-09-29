@@ -1,5 +1,7 @@
 :root {
+    --mi-block-spacing: 1rem;
     --mi-block-block-shortcode-min-height: 1px;
+    --mi-block-custom-html-border: 1px solid #e0e0e0;
     --mi-block-highlighter-color-level-1-hover: #0000FF;
     --mi-block-highlighter-color-level-1: #0000FF33;
     --mi-block-highlighter-color-level-2-hover: #FF0000;
@@ -49,6 +51,37 @@
                     var(--mi-block-highlighter-color-level-4) 10px,
                     var(--mi-block-highlighter-color-level-4) 20px
             );
+        }
+    }
+
+    /* Make the HTML/CSS/JS block visible */
+
+    .wp-block-html {
+        padding: var(--mi-block-spacing);
+
+        &:before {
+            content: "Custom HTML";
+            display: block;
+            font-weight: bold;
+        }
+
+        .block-editor-inner-content {
+            style[data-wp-block-html="css"] {
+                display: block;
+                font-family: monospace;
+                padding: 1rem;
+                border: var(--mi-block-custom-html-border);
+                margin-bottom: var(--mi-block-spacing);
+                unicode-bidi: embed;
+                white-space: pre;
+
+                &:before {
+                    font-weight: bold;
+                    content: "CSS";
+                    text-decoration: underline;
+                    display: block;
+                }
+            }
         }
     }
 
@@ -103,13 +136,16 @@
     .edit-post-visual-editor__post-title-wrapper {
         max-width: 100% !important;
         margin-top: 0 !important;
+
         background: var(--mi-block-highlighter-title-background-color);
         border-bottom: 1px solid var(--mi-block-highlighter-title-color) !important;
 
         .editor-post-title, .wp-block-post-title {
             color: var(--mi-block-highlighter-title-color) !important;
             padding-top: 0.67rem;
+            padding-bottom: 0.67rem;
             margin-top: 0 !important;
+            font-size: 2em !important;
         }
     }
 }

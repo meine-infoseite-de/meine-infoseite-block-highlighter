@@ -4,8 +4,8 @@ Contributors: adrian2k7,moewe,sachsentours
 Tags: gutenberg, block, highlight
 Donate link: https://www.paypal.com/paypalme/scrobbleme/5
 Requires at least: 6.9
-Tested up to: 6.9
-Stable tag: 2.0.0
+Tested up to: 7.1
+Stable tag: 2.0.1
 Requires PHP: 8.0
 License: GPLv3
 
@@ -31,12 +31,23 @@ Upgrades just work.
 
 No, the plugin has no settings.
 
+*Is there a paid version (pro)?*
+
+No, there are no pro features or any upsell bloat we can think of. Feel free to use the [donate link](https://www.paypal.com/paypalme/scrobbleme/5).
+
 == Screenshots ==
 
 1. Shows the editor with the plugin enabled.
 2. Shows the editor without the plugin enabled.
+2. Shows the Custom HTML block.
 
 == Changelog ==
+
+= 2.1.0 (2026-09-29) =
+
+* The Custom HTML block highlighting was improved: CSS is shown (JS is not)
+* The title will be more subtle now (if there is a huge font size defined in the theme)
+* Tested with the latest WordPress
 
 = 2.0.0 (2026-03-09) =
 

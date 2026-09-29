@@ -4,8 +4,9 @@
  * Plugin Name: Meine Infoseite: Block Highlighter
  * Plugin URI: https://wordpress.org/plugins/meine-infoseite-block-highlighter/
  * Description: Helper plugin for highlighting blocks within the block editor.
- * Version: 2.0.0
+ * Version: 2.1.0
  * Requires at least: 6.9
+ * Tested up to: 7.1
  * Requires PHP: 8.0
  * Author: Adrian Mörchen / Meine Infoseite
  * Author URI: https://www.meine-infoseite.de/
@@ -20,7 +21,7 @@ add_action('admin_enqueue_scripts', 'meine_infoseite_highlighter_update_block_st
 
 function meine_infoseite_highlighter_enqueue_block_editor_assets(): void
 {
-    wp_enqueue_style('meine-infoseite-block-highlighter', plugins_url('/meine-infoseite-block-highlighter.css', __FILE__), [], '2.0.0');
+    wp_enqueue_style('meine-infoseite-block-highlighter', plugins_url('/meine-infoseite-block-highlighter.css', __FILE__), [], '2.1.0');
 }
 
 /** Needed for WooCommerce: add the script as dependency for WooCommerce  */
