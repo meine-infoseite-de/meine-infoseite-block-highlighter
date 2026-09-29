@@ -5,7 +5,7 @@ Tags: gutenberg, block, highlight
 Donate link: https://www.paypal.com/paypalme/scrobbleme/5
 Requires at least: 6.9
 Tested up to: 7.1
-Stable tag: 2.0.1
+Stable tag: 2.1.0
 Requires PHP: 8.0
 License: GPLv3
 
@@ -42,6 +42,11 @@ No, there are no pro features or any upsell bloat we can think of. Feel free to 
 2. Shows the Custom HTML block.
 
 == Changelog ==
+
+*PHP deprecation notices*
+
+Starting with the next release, we will only support PHP versions not already EOL.
+We urge anyone to upgrade to a supported version as soon as possible.
 
 = 2.1.0 (2026-09-29) =
 
