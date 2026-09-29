@@ -1,4 +1,4 @@
-=== Meine Infoseite: Block Highlighter ===
+=== Block Highlighter by Meine Infoseite===
 
 Contributors: adrian2k7,moewe,sachsentours
 Tags: gutenberg, block, highlight
@@ -27,11 +27,11 @@ Upgrades just work.
 
 == Frequently Asked Questions ==
 
-*Are there any settings?*
+= Are there any settings? =
 
 No, the plugin has no settings.
 
-*Is there a paid version (pro)?*
+= Is there a paid version (pro)? =
 
 No, there are no pro features or any upsell bloat we can think of. Feel free to use the [donate link](https://www.paypal.com/paypalme/scrobbleme/5).
 
